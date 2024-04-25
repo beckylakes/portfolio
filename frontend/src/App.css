@@ -1,0 +1,90 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: rgb(23, 17, 59);
+  display: grid;
+  grid-template-columns: auto 25% auto auto auto;
+  align-items: center;
+  padding: 10px;
+}
+
+.name-logo {
+  grid-column: 1;
+  align-items: center;
+  width: 200px;
+  margin-left: 40px;
+}
+
+.name-logo:hover {
+  transform: scale(1.03);
+  transition: all 0.4s ease 0s;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.03);
+    transition: all 0.4s ease 0s;
+    background-color: rgba(0, 0, 0, 0.1);
+    color:azure;
+}
+
+.buttons {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media {
+  grid-column: 4 / 5;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-media-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social-media-icon:hover{
+    transform: scale(1.03);
+    transition: all 0.4s ease 0s;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .buttons,
+  .social-media {
+    grid-column: auto; /* Let buttons and social media icons take full width */
+    justify-content: center; /* Center-align the buttons and social media icons */
+  }
+  .button, .social-media-icon  {
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .name-logo {
+    grid-column: auto; /* Let the logo take full width */
+    max-width: 200px; /* Set maximum width for the logo */
+    margin: 0 auto; /* Center-align the logo */
+  }
+}
