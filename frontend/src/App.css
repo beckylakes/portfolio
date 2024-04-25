@@ -1,8 +1,9 @@
 .app {
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
-  text-align: center;
+  background-color: rgb(23, 17, 59);
+  color:rgb(166, 167, 168);
+  text-align: left;
   min-height: 100vh;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .button:hover {
-    transform: scale(1.03);
+    transform: scale(1.1);
     transition: all 0.4s ease 0s;
     background-color: rgba(0, 0, 0, 0.1);
     color:azure;
@@ -87,4 +88,8 @@
     max-width: 200px; /* Set maximum width for the logo */
     margin: 0 auto; /* Center-align the logo */
   }
+}
+
+.introduction {
+    margin-left: 20px;
 }
