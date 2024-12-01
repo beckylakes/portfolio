@@ -1,95 +1,291 @@
-.app {
-  display: flex;
+html {
+  scroll-padding-top: 20%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
   flex-direction: column;
-  background-color: rgb(23, 17, 59);
-  color:rgb(166, 167, 168);
-  text-align: left;
-  min-height: 100vh;
-}
-
-.header {
-  background-color: rgb(23, 17, 59);
-  display: grid;
-  grid-template-columns: auto 25% auto auto auto;
-  align-items: center;
-  padding: 10px;
-}
-
-.name-logo {
-  grid-column: 1;
-  align-items: center;
-  width: 200px;
-  margin-left: 40px;
-}
-
-.name-logo:hover {
-  transform: scale(1.03);
-  transition: all 0.4s ease 0s;
-}
-
-.button {
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.button:hover {
-    transform: scale(1.1);
-    transition: all 0.4s ease 0s;
-    background-color: rgba(0, 0, 0, 0.1);
-    color:azure;
-}
-
-.buttons {
-  grid-column: 2 / 3;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.social-media {
-  grid-column: 4 / 5;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.social-media-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  background-color: #fffcf7;
 }
 
-.social-media-icon:hover{
-    transform: scale(1.03);
-    transition: all 0.4s ease 0s;
+@media screen and (min-width: 768px) {
+  .App {
+    font-size: large;
+  }
+
+  .Introduction {
+    font-family: Tiempos Headline;
+    color: #444;
+    position: relative;
+    top: -25vh;
+    margin-bottom: 0;
+  }
+
+  .Introduction h1 {
+    padding-right: 40%;
+  }
+
+  .Introduction h2 {
+    padding-right: 40%;
+  }
+
+  .Introduction p {
+    padding-right: 40%;
+  }
+
+  #profile-img {
+    position: absolute;
+    top: 0vh;
+    right: 10vw;
+  }
+
+  #about {
+    margin-top: 10%;
+    padding-top: 0;
+  }
+
+  #tech-list ul {
+    column-count: 3;
+  }
+
+  #practices-list ul {
+    column-count: 2;
+  }
+
+  #work ul {
+    column-count: 5;
+    -webkit-column-count: 5;
+    column-gap: 90px;
+  }
+
+  #portfolio-card {
+    height: 47rem;
+  }
+
 }
 
-@media only screen and (max-width: 600px) {
-  .header {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-  }
-
-  .buttons,
-  .social-media {
-    grid-column: auto; /* Let buttons and social media icons take full width */
-    justify-content: center; /* Center-align the buttons and social media icons */
-  }
-  .button, .social-media-icon  {
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .name-logo {
-    grid-column: auto; /* Let the logo take full width */
-    max-width: 200px; /* Set maximum width for the logo */
-    margin: 0 auto; /* Center-align the logo */
-  }
+.NavBar {
+  text-align: center;
+  background-color: rgb(246, 241, 235, 0.8);
+  color: #444;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  backdrop-filter: blur(10px);
 }
 
-.introduction {
-    margin-left: 20px;
+.NavLinks {
+  font-family: Helvetica;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.EachNavBarLink:link {
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #444;
+}
+
+.EachNavBarLink:visited {
+  color: #444;
+}
+
+.EachNavBarLink:hover {
+  color: rgb(136, 136, 136);
+}
+
+.Introduction {
+  color: #444;
+  line-height: 1.5;
+  margin-top: 35vw;
+}
+
+#profile-img img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: #444 solid 1px;
+  box-shadow: 8px 8px #444;
+  animation: fade-in 1.5s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35%;
+}
+#profile-img:hover {
+  transform: scale(1.03);
+  transition: all 0.7s ease 0s;
+}
+
+.Introduction p {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: Helvetica;
+  text-align: justify;
+}
+
+.Introduction h1 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Introduction h2 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Introduction h3 {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+#about {
+  font-family: Helvetica;
+  line-height: 1.5;
+  color: #444;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+  text-align: justify;
+}
+
+#about h1 {
+  font-size: 2rem;
+  font-family: Tiempos Headline;
+  animation: fade-in 2s;
+}
+
+#about h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  font-family: Tiempos Headline;
+  margin: 0;
+}
+
+#about a {
+  color: #444;
+}
+
+#about a:visited {
+  color: #444;
+}
+
+#about a:hover {
+  color: rgb(136, 136, 136);
+}
+
+
+#work {
+  font-family: Helvetica;
+  line-height: 1.5;
+  color: #444;
+  padding-top: 1rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: justify;
+}
+
+#work ul {
+  padding-left: 0%;
+}
+
+.project-screenshot {
+  border-radius: 50%;
+  border: 2px solid #44444416;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.project-screenshot:hover {
+  opacity: 80%;
+  transform: scale(1.02);
+  transition: all 0.7s ease 0s;
+}
+
+#work h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: Tiempos Headline;
+  animation: fade-in 2s;
+}
+
+#portfolio-card {
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 3%;
+  margin-bottom: 5%;
+}
+
+#portfolio-card h1 {
+  font-size: 1.25rem;
+}
+
+#portfolio-card h2 {
+  font-size: 1rem;
+}
+
+.project-link-icons {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+}
+
+.project-link-icons:hover {
+  opacity: 50%;
+}
+
+#back-to-top {
+  padding: 1rem;
+  color: #444;
+  justify-content: center;
+  display: flex;
+}
+
+#back-to-top:hover {
+  color: rgb(136, 136, 136);
+}
+
+#back-to-top:visited {
+  color: #444;
+}
+
+#contact {
+  color: #444;
+  text-align: center;
+  margin: 10%;
+  padding: 5%;
+}
+
+#contact p {
+  font-family: Helvetica;
+}
+
+.Social-Icons {
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.Social-Icons:hover {
+  opacity: 50%;
+}
+
+.Footer {
+  font-family: Helvetica;
+  color: #444;
+  text-align: center;
+  font-size: small;
+  border-top: #444 solid 1px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
